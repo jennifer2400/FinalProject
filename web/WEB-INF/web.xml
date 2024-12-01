@@ -4,9 +4,33 @@
         <servlet-name>MainPage</servlet-name>
         <servlet-class>sv.edu.udb.servlets.MainPage</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CrearUserServlet</servlet-name>
+        <servlet-class>sv.edu.udb.controlador.CrearUserServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>sv.edu.udb.controlador.LoginServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ConsultasSqlServlet</servlet-name>
+        <servlet-class>sv.edu.udb.controlador.ConsultasSqlServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>MainPage</servlet-name>
         <url-pattern>/MainPage</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CrearUserServlet</servlet-name>
+        <url-pattern>/CrearUserServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ConsultasSqlServlet</servlet-name>
+        <url-pattern>/ConsultasSqlServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
