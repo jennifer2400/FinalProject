@@ -16,6 +16,18 @@
         <servlet-name>ConsultasSqlServlet</servlet-name>
         <servlet-class>sv.edu.udb.controlador.ConsultasSqlServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RecuperarPasswordServlet</servlet-name>
+        <servlet-class>sv.edu.udb.controlador.RecuperarPasswordServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CrearUsuarioServlet</servlet-name>
+        <servlet-class>sv.edu.udb.controlador.CrearUsuarioServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AgregarMaterialServlet</servlet-name>
+        <servlet-class>sv.edu.udb.controlador.AgregarMaterialServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>MainPage</servlet-name>
         <url-pattern>/MainPage</url-pattern>
@@ -31,6 +43,18 @@
     <servlet-mapping>
         <servlet-name>ConsultasSqlServlet</servlet-name>
         <url-pattern>/ConsultasSqlServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RecuperarPasswordServlet</servlet-name>
+        <url-pattern>/RecuperarPasswordServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CrearUsuarioServlet</servlet-name>
+        <url-pattern>/CrearUsuarioServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AgregarMaterialServlet</servlet-name>
+        <url-pattern>/AgregarMaterialServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
