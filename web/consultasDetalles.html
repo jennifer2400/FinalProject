@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Material</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Detalles del Material</h2>
+        <div id="detallesMaterial"></div>
+    </div>
+
+    <script>
+        // Simulación de datos obtenidos por ID
+        const materialData = {
+            1: {titulo: "Título 1", autor: "Autor 1", editorial: "Editorial X", isbn: "1234567890", tipo: "Libro"},
+            2: {titulo: "Título 2", autor: "Autor 2", editorial: "Editorial Y", fechaPublicacion: "2021", tipo: "Revista"}
+        };
+
+        function mostrarDetalles() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const materialId = urlParams.get('id');
+            const detalles = materialData[materialId];
+
+            let htmlDetalles = `<p><strong>Título:</strong> ${detalles.titulo}</p>
+                                <p><strong>Autor:</strong> ${detalles.autor}</p>
+                                <p><strong>Tipo:</strong> ${detalles.tipo}</p>`;
+
+            if (detalles.tipo === 'Libro') {
+                htmlDetalles += `<p><strong>Editorial:</strong> ${detalles.editorial}</p>
+                                 <p><strong>ISBN:</strong> ${detalles.isbn}</p>`;
+            } else if (detalles.tipo === 'Revista') {
+                htmlDetalles += `<p><strong>Fecha de Publicación:</strong> ${detalles.fechaPublicacion}</p>`;
+            }
+            
+            document.getElementById('detallesMaterial').innerHTML = htmlDetalles;
+        }
+
+        mostrarDetalles();
+    </script>
+</body>
+</html>
+
